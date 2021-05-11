@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    background-image: url(images/bg-pattern.svg);
+    background-size: 140ch;
+    background-repeat: no-repeat;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    padding-bottom: 100%
+}
+.card {
+    position: relative;
+    display: block;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90%;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.253);
+}
+.card-footer, .card-header {
+    padding: 2ch;
+}
+.card-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.048);
+}
+.price-box {
+    text-align: center;
+}
+#price-top {
+  display: none;
+}
+#price-bot {
+  margin-top: 3ch;
+  text-align: center;
+}
+.pageviews {
+  margin-bottom: 3ch;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: hsla(227, 35%, 25%, 0.473);
+}
+.price{
+  font-weight: 800;
+  color: hsla(225, 20%, 60%, 0.521);
+}
+.numerical {
+  font-size: 25px;
+  color: hsl(227, 35%, 25%);
+}
+.discount-box {
+  display: flex;
+  margin-top: 4ch;
+  font-size: 12px;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+.biling-mounth, .biling-year, .discount {
+  align-self: center;
+}
+.biling-mounth, .biling-year {
+  color:hsl(227, 35%, 25%) ;
+}
+.discount {
+  background-color:hsl(14, 92%, 95%);
+  padding: 5px;
+  border-radius: 40px;
+  color:hsl(15, 100%, 70%) ;
+}
+.discount-span {
+  display: none;
+}
+.text-box-outside {
+  text-align: center;
+  padding: 5ch 3ch 5ch 3ch;
+  color:hsl(227, 35%, 25%) ;
+  background-image: url(images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position:center;
+}
+.sub-title-outside {
+  padding: 2ch 6ch 2ch 6ch;
+  color: hsl(225, 20%, 60%);
+}
+.items-box {
+  list-style: none;
+  text-align: center;
+}
+.footer-items {
+  display: flex;
+  justify-content: center;
+  padding: 1ch;
+}
+.icon-check {
+  height: 10px;
+  width: 10px;
+  align-self: center;
+  margin-right: 1ch;
+}
+.footer-text {
+  color:hsl(225, 20%, 60%) ;
+}
+
+.button-box {
+  margin-top: 5ch;
+  text-align: center;
+  margin-bottom: 3ch;
+}
+.button-box a {
+  text-decoration: none;
+  padding: 1.5ch 5ch 1.5ch 5ch;
+  background-color: hsl(227, 35%, 25%);
+  color: white;
+  border-radius: 40px;
+}
+
+
+/*** BOTÃO DE SELEÇÃO ***/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:hsl(224, 65%, 95%);
+    -webkit-transition: .4s;
+    transition: .3s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 3px;
+    bottom: 5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .3s;
+  }
+  
+  input:checked + .slider {
+    background-color: hsla(174, 86%, 45%, 0.733);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px hsl(224, 65%, 95%);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/*** FIM DA CAIXA PARA O BOTÃO ***/
+
+/*** slider ***/
+.slidecontainer {
+    width: 100%; 
+  }
+  #myRange {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 40px;  
+    background: hsla(227, 35%, 25%, 0.082);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  #myRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    background: hsla(174, 86%, 45%, 0.89);
+    cursor: pointer;
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1.5ch;
+    box-shadow: 0px 20px 20px 5px hsl(174, 77%, 80%) ;
+  }
+  
+  #myRange::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: hsl(174, 77%, 80%);
+    cursor: pointer;
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #myRange::-webkit-slider-thumb:hover {
+    background-color: hsl(174, 86%, 45%);
+  }
+/*** FIM DO SLIDER ***/
+
+/*** 1440px ***/
+@media only screen and (min-width: 1440px) {
+  .main {
+    padding-bottom: 30ch;
+    background-size: 150ch;
+  }
+  .text-box-outside {
+    padding-top: 20ch;
+  }
+  #price-bot {
+    display: none;
+  }
+  #price-top {
+    display: block;
+  }
+  .price-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 3ch;
+  }
+  .card {
+    width: 35%;
+  }
+  .pageviews {
+    margin: 0;
+    align-self: center;
+  }
+  .discount-box {
+    margin-top: 8ch;
+  }
+  .discount-span {
+    display: inline-block;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+  .numerical {
+    font-size: 35px;
+  }
+}

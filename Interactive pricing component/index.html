@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"> 
+    <title>Interactive pricing component</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="text-box-outside">
+            <div class="title-box-outside">
+                <h2 class="title-outside">Simple, traffic-based pricing</h2>
+            </div>
+            <div class="sub-title-box-outside">
+                <p class="sub-title-outside">Sign-up for our 30-day trial. <span class="second-line-outside">No credit card required.</span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="price-box">
+                    <p class="pageviews"><span id="views">100K</span> PAGEVIEWS</p>
+                    <p class="price" id="price-top"> <span class="numerical" id="numerical">$ <span id="numerical-to-calc">16</span> </span>/month</p>
+                </div>
+                <div class="slider-box">
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="5" value="3" class="slider-bar" id="myRange" list="price-list" onchange="sliderbar()">
+                        <datalist id="price-list">
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                            <option value="5"></option>
+                        </datalist>
+                      </div>
+                    <p class="price" id="price-bot"> <span class="numerical" id="numerical-bot">$ <span id="numerical-to-calc-bot">16.00</span> </span>/month</p>
+                </div>
+                <div class="discount-box">
+                    <p class="biling-mounth">Monthly Billing</p>
+                    <label class="switch">
+                        <input type="checkbox"  class="checkbox">
+                        <span class="slider round" value='1'></span>
+                    </label>
+                    <p class="biling-year">Yearly Billing</p>
+                    <p class="discount">25% <span class="discount-span">discount</span> </p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <ul class="items-box">
+                    <li class="footer-items">
+                        <img src="images/icon-check.svg" alt="" class="icon-check">
+                        <p class="footer-text">Unlimited websites</p>
+                    </li>
+                    <li class="footer-items">
+                        <img src="images/icon-check.svg" alt="" class="icon-check">
+                        <p class="footer-text">100% data ownership</p>
+                    </li>
+                    <li class="footer-items">
+                        <img src="images/icon-check.svg" alt="" class="icon-check">
+                        <p class="footer-text">Email reports</p>
+                    </li>
+                </ul>
+                <div class="button-box">
+                    <a href="#">Start My Trial</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
